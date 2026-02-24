@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/"
+         xmlns="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51"/>
+
+<owl:ObjectProperty rdf:about="context">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Context"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="endgoal">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Endgoal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="interactionTask">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="InteractionTask"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="processingInformation">
+  <rdfs:domain rdf:resource="Actor"/>
+  <rdfs:range rdf:resource="InformationProcessing"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="interactingAgent">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="Actor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="capability">
+  <rdfs:domain rdf:resource="Actor"/>
+  <rdfs:range rdf:resource="Capability"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="informationMethod">
+  <rdfs:domain rdf:resource="InformationProcessing"/>
+  <rdfs:range rdf:resource="ProcessingMethod"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasInteraction">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Interaction"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="inScenario">
+  <rdfs:domain rdf:resource="Actor"/>
+  <rdfs:range rdf:resource="Scenario"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="interactionMethod">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="InteractionMethod"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasEthicalConsideration">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="EthicalConsideration"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="processingTask">
+  <rdfs:domain rdf:resource="InformationProcessing"/>
+  <rdfs:range rdf:resource="ProcessingTask"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="domain">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Domain"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="Human">
+  <rdfs:subClassOf rdf:resource="Actor"/>
+</owl:Class>
+
+<owl:Class rdf:about="Scenario"/>
+
+<owl:Class rdf:about="Context"/>
+
+<owl:Class rdf:about="Endgoal"/>
+
+<owl:Class rdf:about="Interaction"/>
+
+<owl:Class rdf:about="InteractionTask"/>
+
+<owl:Class rdf:about="InteractionMethod"/>
+
+<owl:Class rdf:about="Actor"/>
+
+<owl:Class rdf:about="InformationProcessing"/>
+
+<owl:Class rdf:about="ProcessingMethod"/>
+
+<owl:Class rdf:about="Capability"/>
+
+<owl:Class rdf:about="ProcessingTask"/>
+
+<owl:Class rdf:about="ArtificialAgent">
+  <rdfs:subClassOf rdf:resource="Actor"/>
+</owl:Class>
+
+<owl:Class rdf:about="EthicalConsideration"/>
+
+<owl:Class rdf:about="Domain"/>
+
+<owl:Class rdf:about="Worker">
+  <rdfs:subClassOf rdf:resource="Human"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="WarehouseAVGscenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="WarehouseAutomation"/>
+  <context rdf:resource="TrustCalibration"/>
+  <context rdf:resource="TaskComplexity"/>
+  <context rdf:resource="GenerationalLevels"/>
+  <endgoal rdf:resource="FillResearchGap"/>
+  <hasEthicalConsideration rdf:resource="Safety"/>
+  <hasEthicalConsideration rdf:resource="Privacy"/>
+  <hasInteraction rdf:resource="Interaction_WorkerZ_AGV"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="WarehouseAutomation">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TrustCalibration">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GenerationalLevels">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TaskComplexity">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FillResearchGap">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Privacy">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Safety">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Worker_GenZ">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="WarehouseAVGscenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Worker_GenY">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="WarehouseAVGscenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Worker_GenX">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="WarehouseAVGscenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Worker_GenBabyboom">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="WarehouseAVGscenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AGV_system">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <capability rdf:resource="Transparency"/>
+  <capability rdf:resource="Collaborativeness"/>
+  <capability rdf:resource="Adaptiveness"/>
+  <capability rdf:resource="Communication"/>
+  <processingInformation rdf:resource="AGV_Processing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Interaction_WorkerZ_AGV">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="Worker_GenZ"/>
+  <interactingAgent rdf:resource="AGV_system"/>
+  <interactionTask rdf:resource="Explainability"/>
+  <interactionMethod rdf:resource="Multimodal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AGV_Processing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Learning"/>
+  <processingTask rdf:resource="Reasoning"/>
+  <processingTask rdf:resource="Transforming"/>
+  <informationMethod rdf:resource="Statistical"/>
+</owl:NamedIndividual>
+
+<Human rdf:about="Teacher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Human>
+
+<Human rdf:about="Adult">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Human>
+
+<InteractionMethod rdf:about="Single-agent">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</InteractionMethod>
+
+<ProcessingMethod rdf:about="Statistical">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ProcessingMethod>
+
+<Capability rdf:about="Communication">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capability>
+
+<Capability rdf:about="Transparency">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capability>
+
+<Capability rdf:about="Adaptiveness">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capability>
+
+<ProcessingTask rdf:about="Transforming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ProcessingTask>
+
+<InteractionMethod rdf:about="Contribution-based">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</InteractionMethod>
+
+<InteractionTask rdf:about="Question-Answering">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</InteractionTask>
+
+<ArtificialAgent rdf:about="Intelligent_System">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ArtificialAgent>
+
+<Human rdf:about="Child">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Human>
+
+<InteractionMethod rdf:about="Collaboration-based">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</InteractionMethod>
+
+<InteractionMethod rdf:about="Non-cooperative">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</InteractionMethod>
+
+<ProcessingTask rdf:about="Generating">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ProcessingTask>
+
+<ProcessingTask rdf:about="Reasoning">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ProcessingTask>
+
+<InteractionTask rdf:about="Recommendation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</InteractionTask>
+
+<ProcessingMethod rdf:about="Hybrid">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ProcessingMethod>
+
+<ProcessingMethod rdf:about="Neuro-symbolic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ProcessingMethod>
+
+<ArtificialAgent rdf:about="Robot">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ArtificialAgent>
+
+<ProcessingMethod rdf:about="Symbolic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ProcessingMethod>
+
+<InteractionMethod rdf:about="Multimodal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</InteractionMethod>
+
+<Capability rdf:about="BDI">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capability>
+
+<InteractionTask rdf:about="Explainability">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</InteractionTask>
+
+<Capability rdf:about="Collaborativeness">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capability>
+
+<Human rdf:about="Designer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Human>
+
+<ProcessingTask rdf:about="Learning">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ProcessingTask>
+
+<Capability rdf:about="Responsibility">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capability>
+
+
+</rdf:RDF>
