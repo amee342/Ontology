@@ -197,6 +197,66 @@
   <informationMethod rdf:resource="Statistical"/>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="FaceMatchingDecisionSupport">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="FaceMatchingAI"/>
+  <context rdf:resource="TaskDifficulty"/>
+  <context rdf:resource="HumanAwareness"/>
+  <context rdf:resource="MachineAccuracy"/>
+  <endgoal rdf:resource="ImproveHumanAccuracy"/>
+  <hasEthicalConsideration rdf:resource="GenderFairness"/>
+  <hasInteraction rdf:resource="FaceMatchingLabelRecommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FaceMatchingAI">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TaskDifficulty">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MachineAccuracy">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanAwareness">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ImproveHumanAccuracy">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GenderFairness">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Participant1">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="FaceMatchingDecisionSupport"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DecisionSupportSystem">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="FaceMatchingDecisionSupport"/>
+  <capability rdf:resource="Communication"/>
+  <processingInformation rdf:resource="FaceMatchingLabeling"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FaceMatchingLabeling">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Reasoning"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FaceMatchingLabelRecommendation">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="DecisionSupportSystem"/>
+  <interactingAgent rdf:resource="Participant1"/>
+  <interactionTask rdf:resource="Question-Answering"/>
+  <interactionMethod rdf:resource="Single-agent"/>
+</owl:NamedIndividual>
+
 <Human rdf:about="Teacher">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Human>
