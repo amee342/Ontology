@@ -1,0 +1,129 @@
+<owl:NamedIndividual rdf:about="SHARPIE_HumanAIRL_Scenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="HumanAISequentialDecisionMaking"/>
+  <context rdf:resource="HybridHumanAIInteraction"/>
+  <context rdf:resource="MultiAgentCollaboration"/>
+  <context rdf:resource="SequentialDecisionMaking"/>
+  <endgoal rdf:resource="StandardizeHumanAgentInteractions"/>
+  <hasEthicalConsideration rdf:resource="HumanParticipantSafety"/>
+  <hasEthicalConsideration rdf:resource="Privacy"/>
+  <hasInteraction rdf:resource="Interaction_Human_RLAgent"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanAISequentialDecisionMaking">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HybridHumanAIInteraction">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MultiAgentCollaboration">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="SequentialDecisionMaking">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="StandardizeHumanAgentInteractions">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Privacy">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanParticipantSafety">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Interaction_Human_RLAgent">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="Human_Participant"/>
+  <interactingAgent rdf:resource="RL_Agent"/>
+  <interactionMethod rdf:resource="BidirectionalCommunication"/>
+  <interactionTask rdf:resource="CollaborativeDecisionMaking"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Human_Participant">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="SHARPIE_HumanAIRL_Scenario"/>
+  <processingInformation rdf:resource="HumanInformationProcessing"/>
+  <capability rdf:resource="Adaptability"/>
+  <capability rdf:resource="DecisionMaking"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="RL_Agent">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="SHARPIE_HumanAIRL_Scenario"/>
+  <processingInformation rdf:resource="RLAgentInformationProcessing"/>
+  <capability rdf:resource="Learning"/>
+  <capability rdf:resource="Prediction"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanInformationProcessing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="ObserveEnvironment"/>
+  <processingTask rdf:resource="CommunicateDecision"/>
+  <informationMethod rdf:resource="CognitiveReasoning"/>
+  <informationMethod rdf:resource="MultimodalCommunication"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="RLAgentInformationProcessing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="ObserveEnvironment"/>
+  <processingTask rdf:resource="UpdatePolicy"/>
+  <processingTask rdf:resource="ExecuteAction"/>
+  <informationMethod rdf:resource="ReinforcementLearning"/>
+  <informationMethod rdf:resource="MultimodalCommunication"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ObserveEnvironment">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="CommunicateDecision">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="UpdatePolicy">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ExecuteAction">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="CognitiveReasoning">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ReinforcementLearning">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MultimodalCommunication">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+  <rdf:type rdf:resource="InteractionMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="CollaborativeDecisionMaking">
+  <rdf:type rdf:resource="InteractionTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Adaptability">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DecisionMaking">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Learning">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Prediction">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
