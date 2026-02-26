@@ -130,6 +130,7 @@
 
 <owl:NamedIndividual rdf:about="TrustCalibration">
   <rdf:type rdf:resource="Context"/>
+  <rdf:type rdf:resource="EthicalConsideration"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="GenerationalLevels">
@@ -255,6 +256,184 @@
   <interactingAgent rdf:resource="DecisionSupportSystem"/>
   <interactionTask rdf:resource="Recommendation"/>
   <interactionMethod rdf:resource="Single-agent"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="EndUserInteractionWithAI">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="ExplainableAI"/>
+  <context rdf:resource="EndUserWithLimitedAIExpertise"/>
+  <endgoal rdf:resource="FacilitateUserUnderstanding"/>
+  <hasEthicalConsideration rdf:resource="TrustCalibration"/>
+  <hasEthicalConsideration rdf:resource="TransparencyInAI"/>
+  <hasInteraction rdf:resource="AICommunicatesState"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ExplainableAI">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="EndUserWithLimitedAIExpertise">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FacilitateUserUnderstanding">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TransparencyInAI">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="EndUser">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="EndUserInteractionWithAI"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AISystem">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <capability rdf:resource="Communication"/>
+  <capability rdf:resource="Transparency"/>
+  <inScenario rdf:resource="EndUserInteractionWithAI"/>
+  <processingInformation rdf:resource="ExplanationProcessing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AICommunicatesState">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="EndUser"/>
+  <interactingAgent rdf:resource="AISystem"/>
+  <interactionTask rdf:resource="Explainability"/>
+  <interactionMethod rdf:resource="Collaboration-based"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ExplanationProcessing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Reasoning"/>
+  <informationMethod rdf:resource="Statistical"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AutonomousVehicleBeliefCommunication">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="AutonomousDriving"/>
+  <context rdf:resource="HumanPassengerInteraction"/>
+  <endgoal rdf:resource="ImproveSituationAwareness"/>
+  <hasInteraction rdf:resource="VehicleVisualizesBeliefs"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AutonomousDriving">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanPassengerInteraction">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ImproveSituationAwareness">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AutonomousVehicle">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="AutonomousVehicleBeliefCommunication"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Passenger">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="AutonomousVehicleBeliefCommunication"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="VehicleVisualizesBeliefs">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="Passenger"/>
+  <interactingAgent rdf:resource="AutonomousVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HybridMoralDecisionMaking">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="MoralDecisionMaking"/>
+  <endgoal rdf:resource="UnderstandingDifferenceOfMoralReasing"/>
+  <endgoal rdf:resource="UnderstandingAlignmentOfMoralReasing"/>
+  <context rdf:resource="NonCatastrophicSacrificialDilemmas"/>
+  <hasInteraction rdf:resource="GPTProvidesMoralAdvice"/>
+  <hasEthicalConsideration rdf:resource="ConformityToLLMAdvice"/>
+  <hasEthicalConsideration rdf:resource="ConsequentialistSkew"/>
+  <hasEthicalConsideration rdf:resource="HumanLLMAlignment"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MoralDecisionMaking">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="NonCatastrophicSacrificialDilemmas">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="UnderstandingAlignmentOfMoralReasing">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="UnderstandingDifferenceOfMoralReasing">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanDecisionMaker">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ChatGPT_4o">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
+  <processingInformation rdf:resource="MoralReasoningProcessing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Claude_3_5_Sonnet">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
+  <processingInformation rdf:resource="MoralReasoningProcessing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Gemini_1_5_Pro">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
+  <processingInformation rdf:resource="MoralReasoningProcessing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GEMINIProvidesMoralAdvice">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="HumanDecisionMaker"/>
+  <interactingAgent rdf:resource="Gemini_1_5_Pro"/>
+  <interactionTask rdf:resource="Recommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="CLAUDEProvidesMoralAdvice">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="Claude_3_5_Sonnet"/>
+  <interactingAgent rdf:resource="HumanDecisionMaker"/>
+  <interactionTask rdf:resource="Recommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GPTProvidesMoralAdvice">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="ChatGPT_4o"/>
+  <interactingAgent rdf:resource="HumanDecisionMaker"/>
+  <interactionTask rdf:resource="Recommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MoralReasoningProcessing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Reasoning"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanLLMAlignment">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ConsequentialistSkew">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ConformityToLLMAdvice">
+  <rdf:type rdf:resource="EthicalConsideration"/>
 </owl:NamedIndividual>
 
 <Human rdf:about="Teacher">
