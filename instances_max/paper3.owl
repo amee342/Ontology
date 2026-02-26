@@ -1,0 +1,141 @@
+<!-- ================= SCENARIO ================= -->
+<owl:NamedIndividual rdf:about="BRIDGET_HybridDecisionScenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="HybridDecisionMaking"/>
+  <context rdf:resource="HumanInTheLoopLabeling"/>
+  <context rdf:resource="LearningToDefer"/>
+  <context rdf:resource="SkepticalLearning"/>
+  <endgoal rdf:resource="BridgeHybridDecisionGap"/>
+  <hasEthicalConsideration rdf:resource="Explainability"/>
+  <hasEthicalConsideration rdf:resource="HumanControl"/>
+  <hasInteraction rdf:resource="Interaction_User_BRIDGET"/>
+</owl:NamedIndividual>
+
+<!-- ================= DOMAIN ================= -->
+<owl:NamedIndividual rdf:about="HybridDecisionMaking">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<!-- ================= CONTEXTS ================= -->
+<owl:NamedIndividual rdf:about="HumanInTheLoopLabeling">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LearningToDefer">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="SkepticalLearning">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<!-- ================= ENDGOAL ================= -->
+<owl:NamedIndividual rdf:about="BridgeHybridDecisionGap">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<!-- ================= ETHICS ================= -->
+<owl:NamedIndividual rdf:about="Explainability">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanControl">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<!-- ================= ACTORS ================= -->
+<owl:NamedIndividual rdf:about="HumanLabeler">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="BRIDGET_HybridDecisionScenario"/>
+  <processingInformation rdf:resource="HumanLabelingProcess"/>
+  <capability rdf:resource="DataAnnotation"/>
+  <capability rdf:resource="DecisionValidation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="BRIDGET_System">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="BRIDGET_HybridDecisionScenario"/>
+  <processingInformation rdf:resource="BRIDGET_Processing"/>
+  <capability rdf:resource="UncertaintyEstimation"/>
+  <capability rdf:resource="DecisionDeferral"/>
+  <capability rdf:resource="IncrementalLearning"/>
+</owl:NamedIndividual>
+
+<!-- ================= INTERACTION ================= -->
+<owl:NamedIndividual rdf:about="Interaction_User_BRIDGET">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="HumanLabeler"/>
+  <interactingAgent rdf:resource="BRIDGET_System"/>
+  <interactionMethod rdf:resource="AdaptiveControlSwitching"/>
+  <interactionTask rdf:resource="LabelUnlabeledData"/>
+</owl:NamedIndividual>
+
+<!-- ================= INFORMATION PROCESSING ================= -->
+<owl:NamedIndividual rdf:about="HumanLabelingProcess">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="ManualDataLabeling"/>
+  <informationMethod rdf:resource="HumanJudgment"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="BRIDGET_Processing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="ModelPrediction"/>
+  <processingTask rdf:resource="DeferralDecision"/>
+  <processingTask rdf:resource="OnlineModelUpdate"/>
+  <informationMethod rdf:resource="MachineLearningInference"/>
+</owl:NamedIndividual>
+
+<!-- ================= TASKS ================= -->
+<owl:NamedIndividual rdf:about="ManualDataLabeling">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ModelPrediction">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DeferralDecision">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="OnlineModelUpdate">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LabelUnlabeledData">
+  <rdf:type rdf:resource="InteractionTask"/>
+</owl:NamedIndividual>
+
+<!-- ================= METHODS ================= -->
+<owl:NamedIndividual rdf:about="HumanJudgment">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MachineLearningInference">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AdaptiveControlSwitching">
+  <rdf:type rdf:resource="InteractionMethod"/>
+</owl:NamedIndividual>
+
+<!-- ================= CAPABILITIES ================= -->
+<owl:NamedIndividual rdf:about="DataAnnotation">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DecisionValidation">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="UncertaintyEstimation">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DecisionDeferral">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="IncrementalLearning">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>

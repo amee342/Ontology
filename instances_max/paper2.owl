@@ -1,0 +1,159 @@
+<!-- ================= SCENARIO ================= -->
+<owl:NamedIndividual rdf:about="HILO_LegalDesk_Scenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="LearningOrganization"/>
+  <context rdf:resource="KnowledgeErosion"/>
+  <context rdf:resource="HumanAICoEvolution"/>
+  <context rdf:resource="DecisionSupportConsultation"/>
+  <endgoal rdf:resource="EnhanceOrganizationalIntelligence"/>
+  <hasEthicalConsideration rdf:resource="HumanOversight"/>
+  <hasEthicalConsideration rdf:resource="Explainability"/>
+  <hasEthicalConsideration rdf:resource="ResponsibleAIuse"/>
+  <hasInteraction rdf:resource="Interaction_LegalAdvisor_AItool"/>
+</owl:NamedIndividual>
+
+<!-- ================= DOMAIN ================= -->
+<owl:NamedIndividual rdf:about="LearningOrganization">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<!-- ================= CONTEXTS ================= -->
+<owl:NamedIndividual rdf:about="KnowledgeErosion">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanAICoEvolution">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DecisionSupportConsultation">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<!-- ================= ENDGOAL ================= -->
+<owl:NamedIndividual rdf:about="EnhanceOrganizationalIntelligence">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<!-- ================= ETHICS ================= -->
+<owl:NamedIndividual rdf:about="HumanOversight">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Explainability">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ResponsibleAIuse">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<!-- ================= ACTORS ================= -->
+<owl:NamedIndividual rdf:about="LegalAdvisor_Novice">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="HILO_LegalDesk_Scenario"/>
+  <processingInformation rdf:resource="HumanLegalProcessing"/>
+  <capability rdf:resource="LegalReasoning"/>
+  <capability rdf:resource="ClientConsultation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LegalAdvisor_Expert">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="HILO_LegalDesk_Scenario"/>
+  <processingInformation rdf:resource="HumanLegalProcessing"/>
+  <capability rdf:resource="LegalReasoning"/>
+  <capability rdf:resource="CommunityKnowledgeSharing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LegalDecisionSupportAI">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HILO_LegalDesk_Scenario"/>
+  <processingInformation rdf:resource="AIlegalProcessing"/>
+  <capability rdf:resource="PatternDetection"/>
+  <capability rdf:resource="DecisionSupportGeneration"/>
+</owl:NamedIndividual>
+
+<!-- ================= INTERACTION ================= -->
+<owl:NamedIndividual rdf:about="Interaction_LegalAdvisor_AItool">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="LegalAdvisor_Novice"/>
+  <interactingAgent rdf:resource="LegalAdvisor_Expert"/>
+  <interactingAgent rdf:resource="LegalDecisionSupportAI"/>
+  <interactionMethod rdf:resource="HumanAIfeedbackLoop"/>
+  <interactionTask rdf:resource="LegalDecisionSupport"/>
+</owl:NamedIndividual>
+
+<!-- ================= INFORMATION PROCESSING ================= -->
+<owl:NamedIndividual rdf:about="HumanLegalProcessing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="DiagnoseClientProblem"/>
+  <processingTask rdf:resource="ProvideLegalAdvice"/>
+  <informationMethod rdf:resource="ProfessionalLegalReasoning"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AIlegalProcessing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="AnalyzeUsageData"/>
+  <processingTask rdf:resource="GenerateAdviceSuggestions"/>
+  <processingTask rdf:resource="ModelAdaptation"/>
+  <informationMethod rdf:resource="MachineLearningAnalysis"/>
+</owl:NamedIndividual>
+
+<!-- ================= PROCESSING TASKS ================= -->
+<owl:NamedIndividual rdf:about="DiagnoseClientProblem">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ProvideLegalAdvice">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AnalyzeUsageData">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GenerateAdviceSuggestions">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ModelAdaptation">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<!-- ================= METHODS ================= -->
+<owl:NamedIndividual rdf:about="ProfessionalLegalReasoning">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MachineLearningAnalysis">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanAIfeedbackLoop">
+  <rdf:type rdf:resource="InteractionMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LegalDecisionSupport">
+  <rdf:type rdf:resource="InteractionTask"/>
+</owl:NamedIndividual>
+
+<!-- ================= CAPABILITIES ================= -->
+<owl:NamedIndividual rdf:about="LegalReasoning">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ClientConsultation">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="CommunityKnowledgeSharing">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="PatternDetection">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DecisionSupportGeneration">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
