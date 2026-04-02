@@ -1,0 +1,1178 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/"
+         xmlns="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51"/>
+
+<owl:ObjectProperty rdf:about="capability">
+  <rdfs:domain rdf:resource="Actor"/>
+  <rdfs:range rdf:resource="Capability"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="context">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Context"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="domain">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Domain"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="endgoal">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Endgoal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasEthicalConsideration">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="EthicalConsideration"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasInteraction">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Interaction"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="inScenario">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="Actor"/>
+  <rdfs:range rdf:resource="Scenario"/>
+  <owl:inverseOf rdf:resource="hasActor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="informationMethod">
+  <rdfs:domain rdf:resource="InformationProcessing"/>
+  <rdfs:range rdf:resource="ProcessingMethod"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="interactingAgent">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="Actor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="interactionMethod">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="InteractionMethod"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="interactionTask">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="InteractionTask"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="processingInformation">
+  <rdfs:domain rdf:resource="Actor"/>
+  <rdfs:range rdf:resource="InformationProcessing"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="processingTask">
+  <rdfs:domain rdf:resource="InformationProcessing"/>
+  <rdfs:range rdf:resource="ProcessingTask"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasTrustLevel">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="TrustLevel"/>
+  <owl:inverseOf rdf:resource="trustLevelOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="trustLevelOf">
+  <rdfs:domain rdf:resource="TrustLevel"/>
+  <rdfs:range rdf:resource="Interaction"/>
+  <owl:inverseOf rdf:resource="hasTrustLevel"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasAutonomyLevel">
+  <rdfs:domain rdf:resource="ArtificialAgent"/>
+  <rdfs:range rdf:resource="AutonomyLevel"/>
+  <owl:inverseOf rdf:resource="autonomyLevelOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="autonomyLevelOf">
+  <rdfs:domain rdf:resource="AutonomyLevel"/>
+  <rdfs:range rdf:resource="ArtificialAgent"/>
+  <owl:inverseOf rdf:resource="hasAutonomyLevel"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasActor">
+  <rdfs:domain rdf:resource="Scenario"/>
+  <rdfs:range rdf:resource="Actor"/>
+  <owl:inverseOf rdf:resource="inScenario"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasControlMode">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="ControlMode"/>
+  <owl:inverseOf rdf:resource="controlModeOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="controlModeOf">
+  <rdfs:domain rdf:resource="ControlMode"/>
+  <rdfs:range rdf:resource="Interaction"/>
+  <owl:inverseOf rdf:resource="hasControlMode"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasDecisionRole">
+  <rdfs:domain rdf:resource="Actor"/>
+  <rdfs:range rdf:resource="DecisionRole"/>
+  <owl:inverseOf rdf:resource="decisionRoleOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="decisionRoleOf">
+  <rdfs:domain rdf:resource="DecisionRole"/>
+  <rdfs:range rdf:resource="Actor"/>
+  <owl:inverseOf rdf:resource="hasDecisionRole"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="providesExplanationType">
+  <rdfs:domain rdf:resource="ArtificialAgent"/>
+  <rdfs:range rdf:resource="ExplanationType"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasCoordinationPattern">
+  <rdfs:domain rdf:resource="Interaction"/>
+  <rdfs:range rdf:resource="CoordinationPattern"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="collaboratesWith">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  <rdfs:domain rdf:resource="Actor"/>
+  <rdfs:range rdf:resource="Actor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="broaderCapability">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  <rdfs:domain rdf:resource="Capability"/>
+  <rdfs:range rdf:resource="Capability"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="subjectToControlMode">
+  <rdfs:domain rdf:resource="ArtificialAgent"/>
+  <rdfs:range rdf:resource="ControlMode"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="Actor">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="hasDecisionRole"/>
+      <owl:allValuesFrom rdf:resource="DecisionRole"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="Capability"/>
+
+<owl:Class rdf:about="Scenario"/>
+
+<owl:Class rdf:about="Context"/>
+
+<owl:Class rdf:about="Domain"/>
+
+<owl:Class rdf:about="Endgoal"/>
+
+<owl:Class rdf:about="EthicalConsideration"/>
+
+<owl:Class rdf:about="Interaction">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="hasTrustLevel"/>
+      <owl:allValuesFrom rdf:resource="TrustLevel"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="hasCoordinationPattern"/>
+      <owl:allValuesFrom rdf:resource="CoordinationPattern"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="interactingAgent"/>
+      <owl:onClass rdf:resource="Actor"/>
+      <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="InformationProcessing"/>
+
+<owl:Class rdf:about="ProcessingMethod"/>
+
+<owl:Class rdf:about="InteractionMethod"/>
+
+<owl:Class rdf:about="InteractionTask"/>
+
+<owl:Class rdf:about="ProcessingTask"/>
+
+<owl:Class rdf:about="ArtificialAgent">
+  <rdfs:subClassOf rdf:resource="Actor"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="hasAutonomyLevel"/>
+      <owl:onClass rdf:resource="AutonomyLevel"/>
+      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="Human">
+  <rdfs:subClassOf rdf:resource="Actor"/>
+  <owl:disjointWith rdf:resource="ArtificialAgent"/>
+</owl:Class>
+
+<owl:Class rdf:about="Worker">
+  <rdfs:subClassOf rdf:resource="Human"/>
+</owl:Class>
+
+<owl:Class rdf:about="TrustLevel">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="HighTrust">
+  <rdfs:subClassOf rdf:resource="TrustLevel"/>
+</owl:Class>
+
+<owl:Class rdf:about="MediumTrust">
+  <rdfs:subClassOf rdf:resource="TrustLevel"/>
+</owl:Class>
+
+<owl:Class rdf:about="LowTrust">
+  <rdfs:subClassOf rdf:resource="TrustLevel"/>
+</owl:Class>
+
+<owl:Class rdf:about="AutonomyLevel">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="LowAutonomy">
+  <rdfs:subClassOf rdf:resource="AutonomyLevel"/>
+</owl:Class>
+
+<owl:Class rdf:about="SemiAutonomous">
+  <rdfs:subClassOf rdf:resource="AutonomyLevel"/>
+</owl:Class>
+
+<owl:Class rdf:about="HighAutonomy">
+  <rdfs:subClassOf rdf:resource="AutonomyLevel"/>
+</owl:Class>
+
+<owl:Class rdf:about="ControlMode">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="HumanInTheLoop">
+  <rdfs:subClassOf rdf:resource="ControlMode"/>
+</owl:Class>
+
+<owl:Class rdf:about="HumanOnTheLoop">
+  <rdfs:subClassOf rdf:resource="ControlMode"/>
+</owl:Class>
+
+<owl:Class rdf:about="HumanOutOfTheLoop">
+  <rdfs:subClassOf rdf:resource="ControlMode"/>
+</owl:Class>
+
+<owl:Class rdf:about="DecisionRole">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="HumanFinalDecisionMaker">
+  <rdfs:subClassOf rdf:resource="DecisionRole"/>
+</owl:Class>
+
+<owl:Class rdf:about="AIFinalDecisionMaker">
+  <rdfs:subClassOf rdf:resource="DecisionRole"/>
+</owl:Class>
+
+<owl:Class rdf:about="SharedDecisionMaking">
+  <rdfs:subClassOf rdf:resource="DecisionRole"/>
+</owl:Class>
+
+<owl:Class rdf:about="ExplanationType">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="OutcomeExplanation">
+  <rdfs:subClassOf rdf:resource="ExplanationType"/>
+</owl:Class>
+
+<owl:Class rdf:about="ProcessExplanation">
+  <rdfs:subClassOf rdf:resource="ExplanationType"/>
+</owl:Class>
+
+<owl:Class rdf:about="CounterfactualExplanation">
+  <rdfs:subClassOf rdf:resource="ExplanationType"/>
+</owl:Class>
+
+<owl:Class rdf:about="CoordinationPattern">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="SequentialCoordination">
+  <rdfs:subClassOf rdf:resource="CoordinationPattern"/>
+</owl:Class>
+
+<owl:Class rdf:about="ParallelCoordination">
+  <rdfs:subClassOf rdf:resource="CoordinationPattern"/>
+</owl:Class>
+
+<owl:Class rdf:about="SupervisoryCoordination">
+  <rdfs:subClassOf rdf:resource="CoordinationPattern"/>
+</owl:Class>
+
+<owl:Class rdf:about="CollaborativeCoordination">
+  <rdfs:subClassOf rdf:resource="CoordinationPattern"/>
+</owl:Class>
+
+<owl:Class rdf:about="DecisionParticipant">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="Human"/>
+        <rdf:Description rdf:about="ArtificialAgent"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="HighTrustInteraction">
+  <rdfs:subClassOf rdf:resource="Interaction"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="Interaction"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="hasTrustLevel"/>
+          <owl:someValuesFrom rdf:resource="HighTrust"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="SupervisedAIAgent">
+  <rdfs:subClassOf rdf:resource="ArtificialAgent"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ArtificialAgent"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="subjectToControlMode"/>
+          <owl:someValuesFrom rdf:resource="HumanOnTheLoop"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="AGV_Processing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <informationMethod rdf:resource="Statistical"/>
+  <processingTask rdf:resource="Learning"/>
+  <processingTask rdf:resource="Reasoning"/>
+  <processingTask rdf:resource="Transforming"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Statistical">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Learning">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Reasoning">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Transforming">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AGV_system">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <capability rdf:resource="Adaptiveness"/>
+  <capability rdf:resource="Collaborativeness"/>
+  <capability rdf:resource="Communication"/>
+  <capability rdf:resource="Transparency"/>
+  <processingInformation rdf:resource="AGV_Processing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Adaptiveness">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Collaborativeness">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Communication">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Transparency">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AICommunicatesState">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="AISystem"/>
+  <interactingAgent rdf:resource="EndUser"/>
+  <interactionMethod rdf:resource="Collaboration-based"/>
+  <interactionTask rdf:resource="Explainability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AISystem">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <capability rdf:resource="Communication"/>
+  <capability rdf:resource="Transparency"/>
+  <inScenario rdf:resource="EndUserInteractionWithAI"/>
+  <processingInformation rdf:resource="ExplanationProcessing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="EndUser">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="EndUserInteractionWithAI"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Collaboration-based">
+  <rdf:type rdf:resource="InteractionMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Explainability">
+  <rdf:type rdf:resource="InteractionTask"/>
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="EndUserInteractionWithAI">
+  <rdf:type rdf:resource="Scenario"/>
+  <context rdf:resource="EndUserWithLimitedAIExpertise"/>
+  <domain rdf:resource="ExplainableAI"/>
+  <endgoal rdf:resource="FacilitateUserUnderstanding"/>
+  <hasEthicalConsideration rdf:resource="TransparencyInAI"/>
+  <hasEthicalConsideration rdf:resource="TrustCalibration"/>
+  <hasInteraction rdf:resource="AICommunicatesState"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ExplanationProcessing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <informationMethod rdf:resource="Statistical"/>
+  <processingTask rdf:resource="Reasoning"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="EndUserWithLimitedAIExpertise">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ExplainableAI">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FacilitateUserUnderstanding">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TransparencyInAI">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TrustCalibration">
+  <rdf:type rdf:resource="Context"/>
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Adult">
+  <rdf:type rdf:resource="Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AutonomousDriving">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AutonomousVehicle">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="AutonomousVehicleBeliefCommunication"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="AutonomousVehicleBeliefCommunication">
+  <rdf:type rdf:resource="Scenario"/>
+  <context rdf:resource="HumanPassengerInteraction"/>
+  <domain rdf:resource="AutonomousDriving"/>
+  <endgoal rdf:resource="ImproveSituationAwareness"/>
+  <hasInteraction rdf:resource="VehicleVisualizesBeliefs"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanPassengerInteraction">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ImproveSituationAwareness">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="VehicleVisualizesBeliefs">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="AutonomousVehicle"/>
+  <interactingAgent rdf:resource="Passenger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Passenger">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="AutonomousVehicleBeliefCommunication"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="BDI">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="CLAUDEProvidesMoralAdvice">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="Claude_3_5_Sonnet"/>
+  <interactingAgent rdf:resource="HumanDecisionMaker"/>
+  <interactionTask rdf:resource="Recommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Claude_3_5_Sonnet">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
+  <processingInformation rdf:resource="MoralReasoningProcessing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanDecisionMaker">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Recommendation">
+  <rdf:type rdf:resource="InteractionTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HybridMoralDecisionMaking">
+  <rdf:type rdf:resource="Scenario"/>
+  <context rdf:resource="NonCatastrophicSacrificialDilemmas"/>
+  <domain rdf:resource="MoralDecisionMaking"/>
+  <endgoal rdf:resource="UnderstandingAlignmentOfMoralReasing"/>
+  <endgoal rdf:resource="UnderstandingDifferenceOfMoralReasing"/>
+  <hasEthicalConsideration rdf:resource="ConformityToLLMAdvice"/>
+  <hasEthicalConsideration rdf:resource="ConsequentialistSkew"/>
+  <hasEthicalConsideration rdf:resource="HumanLLMAlignment"/>
+  <hasInteraction rdf:resource="GPTProvidesMoralAdvice"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MoralReasoningProcessing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Reasoning"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ChatGPT_4o">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
+  <processingInformation rdf:resource="MoralReasoningProcessing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="NonCatastrophicSacrificialDilemmas">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MoralDecisionMaking">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="UnderstandingAlignmentOfMoralReasing">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="UnderstandingDifferenceOfMoralReasing">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ConformityToLLMAdvice">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ConsequentialistSkew">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanLLMAlignment">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GPTProvidesMoralAdvice">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="ChatGPT_4o"/>
+  <interactingAgent rdf:resource="HumanDecisionMaker"/>
+  <interactionTask rdf:resource="Recommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Child">
+  <rdf:type rdf:resource="Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Contribution-based">
+  <rdf:type rdf:resource="InteractionMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DecisionSupportSystem">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <capability rdf:resource="Communication"/>
+  <inScenario rdf:resource="FaceMatchingDecisionSupport"/>
+  <processingInformation rdf:resource="FaceMatchingLabeling"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FaceMatchingDecisionSupport">
+  <rdf:type rdf:resource="Scenario"/>
+  <context rdf:resource="HumanAwareness"/>
+  <context rdf:resource="MachineAccuracy"/>
+  <context rdf:resource="TaskDifficulty"/>
+  <domain rdf:resource="FaceMatchingAI"/>
+  <endgoal rdf:resource="ImproveHumanAccuracy"/>
+  <hasEthicalConsideration rdf:resource="GenderFairness"/>
+  <hasInteraction rdf:resource="FaceMatchingLabelRecommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FaceMatchingLabeling">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Reasoning"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanAwareness">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MachineAccuracy">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TaskDifficulty">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FaceMatchingAI">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ImproveHumanAccuracy">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GenderFairness">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FaceMatchingLabelRecommendation">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="DecisionSupportSystem"/>
+  <interactingAgent rdf:resource="Participant1"/>
+  <interactionMethod rdf:resource="Single-agent"/>
+  <interactionTask rdf:resource="Recommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Designer">
+  <rdf:type rdf:resource="Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Participant1">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="FaceMatchingDecisionSupport"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Single-agent">
+  <rdf:type rdf:resource="InteractionMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="FillResearchGap">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GEMINIProvidesMoralAdvice">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="Gemini_1_5_Pro"/>
+  <interactingAgent rdf:resource="HumanDecisionMaker"/>
+  <interactionTask rdf:resource="Recommendation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Gemini_1_5_Pro">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
+  <processingInformation rdf:resource="MoralReasoningProcessing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Generating">
+  <rdf:type rdf:resource="ProcessingTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="GenerationalLevels">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Hybrid">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Intelligent_System">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Interaction_WorkerZ_AGV">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="AGV_system"/>
+  <interactingAgent rdf:resource="Worker_GenZ"/>
+  <interactionMethod rdf:resource="Multimodal"/>
+  <interactionTask rdf:resource="Explainability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Worker_GenZ">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="WarehouseAVGscenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Multimodal">
+  <rdf:type rdf:resource="InteractionMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="WarehouseAVGscenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <context rdf:resource="GenerationalLevels"/>
+  <context rdf:resource="TaskComplexity"/>
+  <context rdf:resource="TrustCalibration"/>
+  <domain rdf:resource="WarehouseAutomation"/>
+  <endgoal rdf:resource="FillResearchGap"/>
+  <hasEthicalConsideration rdf:resource="Privacy"/>
+  <hasEthicalConsideration rdf:resource="Safety"/>
+  <hasInteraction rdf:resource="Interaction_WorkerZ_AGV"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Neuro-symbolic">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Non-cooperative">
+  <rdf:type rdf:resource="InteractionMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Privacy">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Question-Answering">
+  <rdf:type rdf:resource="InteractionTask"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Responsibility">
+  <rdf:type rdf:resource="Capability"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Robot">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Safety">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Symbolic">
+  <rdf:type rdf:resource="ProcessingMethod"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TaskComplexity">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Teacher">
+  <rdf:type rdf:resource="Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="WarehouseAutomation">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Worker_GenBabyboom">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="WarehouseAVGscenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Worker_GenX">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="WarehouseAVGscenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Worker_GenY">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="WarehouseAVGscenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="SHARPIE_HumanAI_RL_Scenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="ReinforcementLearning"/>
+  <context rdf:resource="MultimodalCommunication"/>
+  <context rdf:resource="SequentialDecisionMaking"/>
+  <context rdf:resource="HybridHumanAIInteraction"/>
+  <endgoal rdf:resource="StandardizeHumanAIExperiments"/>
+  <hasEthicalConsideration rdf:resource="HumanInvolvement"/>
+  <hasEthicalConsideration rdf:resource="ResponsibleAIUse"/>
+  <hasInteraction rdf:resource="Interaction_Human_RLAgent"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ReinforcementLearning">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MultimodalCommunication">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="SequentialDecisionMaking">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HybridHumanAIInteraction">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="StandardizeHumanAIExperiments">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanInvolvement">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ResponsibleAIUse">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Interaction_Human_RLAgent">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="RL_Agent"/>
+  <interactingAgent rdf:resource="HumanParticipant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanParticipant">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="SHARPIE_HumanAI_RL_Scenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="RL_Agent">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="SHARPIE_HumanAI_RL_Scenario"/>
+  <capability rdf:resource="Learning"/>
+  <capability rdf:resource="Adaptiveness"/>
+  <processingInformation rdf:resource="RLAgent_Processing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="RLAgent_Processing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Learning"/>
+  <processingTask rdf:resource="Reasoning"/>
+  <processingTask rdf:resource="Transforming"/>
+  <informationMethod rdf:resource="Statistical"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HILO_LegalDesk_Scenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="LearningOrganization"/>
+  <context rdf:resource="HumanAICoEvolution"/>
+  <context rdf:resource="KnowledgeErosion"/>
+  <context rdf:resource="DecisionSupportConsultation"/>
+  <endgoal rdf:resource="EnhanceOrganizationalIntelligence"/>
+  <hasEthicalConsideration rdf:resource="Explainability"/>
+  <hasEthicalConsideration rdf:resource="HumanOversight"/>
+  <hasInteraction rdf:resource="Interaction_LegalAdvisors_AI"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LearningOrganization">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanAICoEvolution">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="KnowledgeErosion">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DecisionSupportConsultation">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="EnhanceOrganizationalIntelligence">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanOversight">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Interaction_LegalAdvisors_AI">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="LegalDecisionSupportAI"/>
+  <interactingAgent rdf:resource="LegalAdvisor_Expert"/>
+  <interactingAgent rdf:resource="LegalAdvisor_Novice"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LegalAdvisor_Novice">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="HILO_LegalDesk_Scenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LegalAdvisor_Expert">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="HILO_LegalDesk_Scenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LegalDecisionSupportAI">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HILO_LegalDesk_Scenario"/>
+  <capability rdf:resource="Learning"/>
+  <capability rdf:resource="Reasoning"/>
+  <processingInformation rdf:resource="LegalAI_Processing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LegalAI_Processing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Learning"/>
+  <processingTask rdf:resource="Reasoning"/>
+  <processingTask rdf:resource="Transforming"/>
+  <informationMethod rdf:resource="Statistical"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="BRIDGET_HybridDecisionScenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="HybridDecisionMaking"/>
+  <context rdf:resource="HumanInTheLoopLabeling"/>
+  <context rdf:resource="SkepticalLearning"/>
+  <context rdf:resource="LearningToDefer"/>
+  <endgoal rdf:resource="BridgeHybridDecisionGap"/>
+  <hasEthicalConsideration rdf:resource="HumanControl"/>
+  <hasEthicalConsideration rdf:resource="Explainability"/>
+  <hasInteraction rdf:resource="Interaction_Human_BRIDGET"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HybridDecisionMaking">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanInTheLoopLabeling">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="SkepticalLearning">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="LearningToDefer">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="BridgeHybridDecisionGap">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanControl">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Interaction_Human_BRIDGET">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="BRIDGET_System"/>
+  <interactingAgent rdf:resource="HumanLabeler"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanLabeler">
+  <rdf:type rdf:resource="Human"/>
+  <inScenario rdf:resource="BRIDGET_HybridDecisionScenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="BRIDGET_System">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="BRIDGET_HybridDecisionScenario"/>
+  <capability rdf:resource="Learning"/>
+  <capability rdf:resource="Reasoning"/>
+  <capability rdf:resource="Adaptiveness"/>
+  <processingInformation rdf:resource="BRIDGET_Processing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="BRIDGET_Processing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Learning"/>
+  <processingTask rdf:resource="Reasoning"/>
+  <processingTask rdf:resource="Transforming"/>
+  <informationMethod rdf:resource="Statistical"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HI_EmergencyAntibioticsScenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="Healthcare"/>
+  <context rdf:resource="TimePressure"/>
+  <context rdf:resource="DistributedMedicalTeam"/>
+  <context rdf:resource="HumanAIClinicalCollaboration"/>
+  <context rdf:resource="EmergencyDecisionMaking"/>
+  <endgoal rdf:resource="MaximizePatientBenefit"/>
+  <hasEthicalConsideration rdf:resource="RiskBenefitBalancing"/>
+  <hasEthicalConsideration rdf:resource="Explainability"/>
+  <hasEthicalConsideration rdf:resource="PatientSafety"/>
+  <hasInteraction rdf:resource="Interaction_MedicalTeam_AI"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Healthcare">
+  <rdf:type rdf:resource="Domain"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="TimePressure">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DistributedMedicalTeam">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HumanAIClinicalCollaboration">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="EmergencyDecisionMaking">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MaximizePatientBenefit">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="RiskBenefitBalancing">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="PatientSafety">
+  <rdf:type rdf:resource="EthicalConsideration"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Interaction_MedicalTeam_AI">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="ClinicalDecisionSupportAI"/>
+  <interactingAgent rdf:resource="MedicalTeamMember"/>
+  <interactionMethod rdf:resource="Multimodal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="MedicalTeamMember">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="HI_EmergencyAntibioticsScenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ClinicalDecisionSupportAI">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HI_EmergencyAntibioticsScenario"/>
+  <capability rdf:resource="Reasoning"/>
+  <capability rdf:resource="Communication"/>
+  <capability rdf:resource="Transparency"/>
+  <capability rdf:resource="Adaptiveness"/>
+  <processingInformation rdf:resource="ClinicalAI_Processing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ClinicalAI_Processing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Learning"/>
+  <processingTask rdf:resource="Reasoning"/>
+  <processingTask rdf:resource="Transforming"/>
+  <informationMethod rdf:resource="Statistical"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="HI_DiagnosisAdjudicationScenario">
+  <rdf:type rdf:resource="Scenario"/>
+  <domain rdf:resource="Healthcare"/>
+  <context rdf:resource="ExpertiseWeightedDecisionMaking"/>
+  <context rdf:resource="HumanAIClinicalCollaboration"/>
+  <context rdf:resource="IterativeClinicalAssessment"/>
+  <context rdf:resource="CollaborativeDiagnosis"/>
+  <endgoal rdf:resource="ImproveDiagnosticAccuracy"/>
+  <hasEthicalConsideration rdf:resource="Explainability"/>
+  <hasEthicalConsideration rdf:resource="ResponsibleAIUse"/>
+  <hasEthicalConsideration rdf:resource="HumanOversight"/>
+  <hasInteraction rdf:resource="Interaction_Caregivers_Doctors_AI"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ExpertiseWeightedDecisionMaking">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="IterativeClinicalAssessment">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="CollaborativeDiagnosis">
+  <rdf:type rdf:resource="Context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ImproveDiagnosticAccuracy">
+  <rdf:type rdf:resource="Endgoal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Interaction_Caregivers_Doctors_AI">
+  <rdf:type rdf:resource="Interaction"/>
+  <interactingAgent rdf:resource="Caregiver"/>
+  <interactingAgent rdf:resource="DiagnosisAdjudicationAI"/>
+  <interactingAgent rdf:resource="Doctor"/>
+  <interactionMethod rdf:resource="Multimodal"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Caregiver">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="HI_DiagnosisAdjudicationScenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="Doctor">
+  <rdf:type rdf:resource="Worker"/>
+  <inScenario rdf:resource="HI_DiagnosisAdjudicationScenario"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DiagnosisAdjudicationAI">
+  <rdf:type rdf:resource="ArtificialAgent"/>
+  <inScenario rdf:resource="HI_DiagnosisAdjudicationScenario"/>
+  <capability rdf:resource="Reasoning"/>
+  <capability rdf:resource="Communication"/>
+  <capability rdf:resource="Transparency"/>
+  <capability rdf:resource="Adaptiveness"/>
+  <processingInformation rdf:resource="DiagnosisAI_Processing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="DiagnosisAI_Processing">
+  <rdf:type rdf:resource="InformationProcessing"/>
+  <processingTask rdf:resource="Learning"/>
+  <processingTask rdf:resource="Reasoning"/>
+  <processingTask rdf:resource="Transforming"/>
+  <informationMethod rdf:resource="Statistical"/>
+</owl:NamedIndividual>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="HumanInTheLoop"/>
+    <rdf:Description rdf:about="HumanOnTheLoop"/>
+    <rdf:Description rdf:about="HumanOutOfTheLoop"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="LowAutonomy"/>
+    <rdf:Description rdf:about="SemiAutonomous"/>
+    <rdf:Description rdf:about="HighAutonomy"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="HighTrust"/>
+    <rdf:Description rdf:about="MediumTrust"/>
+    <rdf:Description rdf:about="LowTrust"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>

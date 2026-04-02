@@ -1,552 +1,1049 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/"
-         xmlns="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/">
+<rdf:RDF xmlns="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/"
+     xml:base="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-51="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51"/>
+    
 
-<owl:Ontology rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51"/>
 
-<owl:ObjectProperty rdf:about="context">
-  <rdfs:domain rdf:resource="Scenario"/>
-  <rdfs:range rdf:resource="Context"/>
-</owl:ObjectProperty>
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-<owl:ObjectProperty rdf:about="endgoal">
-  <rdfs:domain rdf:resource="Scenario"/>
-  <rdfs:range rdf:resource="Endgoal"/>
-</owl:ObjectProperty>
+    
 
-<owl:ObjectProperty rdf:about="interactionTask">
-  <rdfs:domain rdf:resource="Interaction"/>
-  <rdfs:range rdf:resource="InteractionTask"/>
-</owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="processingInformation">
-  <rdfs:domain rdf:resource="Actor"/>
-  <rdfs:range rdf:resource="InformationProcessing"/>
-</owl:ObjectProperty>
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/capability -->
 
-<owl:ObjectProperty rdf:about="interactingAgent">
-  <rdfs:domain rdf:resource="Interaction"/>
-  <rdfs:range rdf:resource="Actor"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="capability">
-  <rdfs:domain rdf:resource="Actor"/>
-  <rdfs:range rdf:resource="Capability"/>
-</owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/capability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability"/>
+    </owl:ObjectProperty>
+    
 
-<owl:ObjectProperty rdf:about="informationMethod">
-  <rdfs:domain rdf:resource="InformationProcessing"/>
-  <rdfs:range rdf:resource="ProcessingMethod"/>
-</owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="hasInteraction">
-  <rdfs:domain rdf:resource="Scenario"/>
-  <rdfs:range rdf:resource="Interaction"/>
-</owl:ObjectProperty>
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/context -->
 
-<owl:ObjectProperty rdf:about="inScenario">
-  <rdfs:domain rdf:resource="Actor"/>
-  <rdfs:range rdf:resource="Scenario"/>
-  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-</owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/context">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:ObjectProperty>
+    
 
-<owl:ObjectProperty rdf:about="interactionMethod">
-  <rdfs:domain rdf:resource="Interaction"/>
-  <rdfs:range rdf:resource="InteractionMethod"/>
-</owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="hasEthicalConsideration">
-  <rdfs:domain rdf:resource="Scenario"/>
-  <rdfs:range rdf:resource="EthicalConsideration"/>
-</owl:ObjectProperty>
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/domain -->
 
-<owl:ObjectProperty rdf:about="processingTask">
-  <rdfs:domain rdf:resource="InformationProcessing"/>
-  <rdfs:range rdf:resource="ProcessingTask"/>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="domain">
-  <rdfs:domain rdf:resource="Scenario"/>
-  <rdfs:range rdf:resource="Domain"/>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="Human">
-  <rdfs:subClassOf rdf:resource="Actor"/>
-</owl:Class>
-
-<owl:Class rdf:about="Scenario"/>
-
-<owl:Class rdf:about="Context"/>
-
-<owl:Class rdf:about="Endgoal"/>
-
-<owl:Class rdf:about="Interaction"/>
-
-<owl:Class rdf:about="InteractionTask"/>
-
-<owl:Class rdf:about="InteractionMethod"/>
-
-<owl:Class rdf:about="Actor"/>
-
-<owl:Class rdf:about="InformationProcessing"/>
-
-<owl:Class rdf:about="ProcessingMethod"/>
-
-<owl:Class rdf:about="Capability"/>
-
-<owl:Class rdf:about="ProcessingTask"/>
-
-<owl:Class rdf:about="ArtificialAgent">
-  <rdfs:subClassOf rdf:resource="Actor"/>
-</owl:Class>
-
-<owl:Class rdf:about="EthicalConsideration"/>
-
-<owl:Class rdf:about="Domain"/>
-
-<owl:Class rdf:about="Worker">
-  <rdfs:subClassOf rdf:resource="Human"/>
-</owl:Class>
-
-<owl:NamedIndividual rdf:about="WarehouseAVGscenario">
-  <rdf:type rdf:resource="Scenario"/>
-  <domain rdf:resource="WarehouseAutomation"/>
-  <context rdf:resource="GenerationalLevels"/>
-  <context rdf:resource="TrustCalibration"/>
-  <context rdf:resource="TaskComplexity"/>
-  <endgoal rdf:resource="FillResearchGap"/>
-  <hasEthicalConsideration rdf:resource="Privacy"/>
-  <hasEthicalConsideration rdf:resource="Safety"/>
-  <hasInteraction rdf:resource="Interaction_WorkerZ_AGV"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="WarehouseAutomation">
-  <rdf:type rdf:resource="Domain"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="TrustCalibration">
-  <rdf:type rdf:resource="Context"/>
-  <rdf:type rdf:resource="EthicalConsideration"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="GenerationalLevels">
-  <rdf:type rdf:resource="Context"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="TaskComplexity">
-  <rdf:type rdf:resource="Context"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="FillResearchGap">
-  <rdf:type rdf:resource="Endgoal"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Privacy">
-  <rdf:type rdf:resource="EthicalConsideration"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Safety">
-  <rdf:type rdf:resource="EthicalConsideration"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Worker_GenZ">
-  <rdf:type rdf:resource="Worker"/>
-  <inScenario rdf:resource="WarehouseAVGscenario"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Worker_GenY">
-  <rdf:type rdf:resource="Worker"/>
-  <inScenario rdf:resource="WarehouseAVGscenario"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Worker_GenX">
-  <rdf:type rdf:resource="Worker"/>
-  <inScenario rdf:resource="WarehouseAVGscenario"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Worker_GenBabyboom">
-  <rdf:type rdf:resource="Worker"/>
-  <inScenario rdf:resource="WarehouseAVGscenario"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="AGV_system">
-  <rdf:type rdf:resource="ArtificialAgent"/>
-  <capability rdf:resource="Communication"/>
-  <capability rdf:resource="Transparency"/>
-  <capability rdf:resource="Adaptiveness"/>
-  <capability rdf:resource="Collaborativeness"/>
-  <processingInformation rdf:resource="AGV_Processing"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Interaction_WorkerZ_AGV">
-  <rdf:type rdf:resource="Interaction"/>
-  <interactingAgent rdf:resource="Worker_GenZ"/>
-  <interactingAgent rdf:resource="AGV_system"/>
-  <interactionTask rdf:resource="Explainability"/>
-  <interactionMethod rdf:resource="Multimodal"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="AGV_Processing">
-  <rdf:type rdf:resource="InformationProcessing"/>
-  <processingTask rdf:resource="Learning"/>
-  <processingTask rdf:resource="Reasoning"/>
-  <processingTask rdf:resource="Transforming"/>
-  <informationMethod rdf:resource="Statistical"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="FaceMatchingDecisionSupport">
-  <rdf:type rdf:resource="Scenario"/>
-  <domain rdf:resource="FaceMatchingAI"/>
-  <context rdf:resource="HumanAwareness"/>
-  <context rdf:resource="MachineAccuracy"/>
-  <context rdf:resource="TaskDifficulty"/>
-  <endgoal rdf:resource="ImproveHumanAccuracy"/>
-  <hasEthicalConsideration rdf:resource="GenderFairness"/>
-  <hasInteraction rdf:resource="FaceMatchingLabelRecommendation"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="FaceMatchingAI">
-  <rdf:type rdf:resource="Domain"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="TaskDifficulty">
-  <rdf:type rdf:resource="Context"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="MachineAccuracy">
-  <rdf:type rdf:resource="Context"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="HumanAwareness">
-  <rdf:type rdf:resource="Context"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="ImproveHumanAccuracy">
-  <rdf:type rdf:resource="Endgoal"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="GenderFairness">
-  <rdf:type rdf:resource="EthicalConsideration"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Participant1">
-  <rdf:type rdf:resource="Human"/>
-  <inScenario rdf:resource="FaceMatchingDecisionSupport"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="DecisionSupportSystem">
-  <rdf:type rdf:resource="ArtificialAgent"/>
-  <inScenario rdf:resource="FaceMatchingDecisionSupport"/>
-  <capability rdf:resource="Communication"/>
-  <processingInformation rdf:resource="FaceMatchingLabeling"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="FaceMatchingLabeling">
-  <rdf:type rdf:resource="InformationProcessing"/>
-  <processingTask rdf:resource="Reasoning"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="FaceMatchingLabelRecommendation">
-  <rdf:type rdf:resource="Interaction"/>
-  <interactingAgent rdf:resource="Participant1"/>
-  <interactingAgent rdf:resource="DecisionSupportSystem"/>
-  <interactionTask rdf:resource="Recommendation"/>
-  <interactionMethod rdf:resource="Single-agent"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="EndUserInteractionWithAI">
-  <rdf:type rdf:resource="Scenario"/>
-  <domain rdf:resource="ExplainableAI"/>
-  <context rdf:resource="EndUserWithLimitedAIExpertise"/>
-  <endgoal rdf:resource="FacilitateUserUnderstanding"/>
-  <hasEthicalConsideration rdf:resource="TrustCalibration"/>
-  <hasEthicalConsideration rdf:resource="TransparencyInAI"/>
-  <hasInteraction rdf:resource="AICommunicatesState"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="ExplainableAI">
-  <rdf:type rdf:resource="Domain"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="EndUserWithLimitedAIExpertise">
-  <rdf:type rdf:resource="Context"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="FacilitateUserUnderstanding">
-  <rdf:type rdf:resource="Endgoal"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="TransparencyInAI">
-  <rdf:type rdf:resource="EthicalConsideration"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="EndUser">
-  <rdf:type rdf:resource="Human"/>
-  <inScenario rdf:resource="EndUserInteractionWithAI"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="AISystem">
-  <rdf:type rdf:resource="ArtificialAgent"/>
-  <capability rdf:resource="Communication"/>
-  <capability rdf:resource="Transparency"/>
-  <inScenario rdf:resource="EndUserInteractionWithAI"/>
-  <processingInformation rdf:resource="ExplanationProcessing"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="AICommunicatesState">
-  <rdf:type rdf:resource="Interaction"/>
-  <interactingAgent rdf:resource="EndUser"/>
-  <interactingAgent rdf:resource="AISystem"/>
-  <interactionTask rdf:resource="Explainability"/>
-  <interactionMethod rdf:resource="Collaboration-based"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="ExplanationProcessing">
-  <rdf:type rdf:resource="InformationProcessing"/>
-  <processingTask rdf:resource="Reasoning"/>
-  <informationMethod rdf:resource="Statistical"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="AutonomousVehicleBeliefCommunication">
-  <rdf:type rdf:resource="Scenario"/>
-  <domain rdf:resource="AutonomousDriving"/>
-  <context rdf:resource="HumanPassengerInteraction"/>
-  <endgoal rdf:resource="ImproveSituationAwareness"/>
-  <hasInteraction rdf:resource="VehicleVisualizesBeliefs"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="AutonomousDriving">
-  <rdf:type rdf:resource="Domain"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="HumanPassengerInteraction">
-  <rdf:type rdf:resource="Context"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="ImproveSituationAwareness">
-  <rdf:type rdf:resource="Endgoal"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="AutonomousVehicle">
-  <rdf:type rdf:resource="ArtificialAgent"/>
-  <inScenario rdf:resource="AutonomousVehicleBeliefCommunication"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Passenger">
-  <rdf:type rdf:resource="Human"/>
-  <inScenario rdf:resource="AutonomousVehicleBeliefCommunication"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="VehicleVisualizesBeliefs">
-  <rdf:type rdf:resource="Interaction"/>
-  <interactingAgent rdf:resource="Passenger"/>
-  <interactingAgent rdf:resource="AutonomousVehicle"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="HybridMoralDecisionMaking">
-  <rdf:type rdf:resource="Scenario"/>
-  <domain rdf:resource="MoralDecisionMaking"/>
-  <endgoal rdf:resource="UnderstandingDifferenceOfMoralReasing"/>
-  <endgoal rdf:resource="UnderstandingAlignmentOfMoralReasing"/>
-  <context rdf:resource="NonCatastrophicSacrificialDilemmas"/>
-  <hasInteraction rdf:resource="GPTProvidesMoralAdvice"/>
-  <hasEthicalConsideration rdf:resource="ConformityToLLMAdvice"/>
-  <hasEthicalConsideration rdf:resource="ConsequentialistSkew"/>
-  <hasEthicalConsideration rdf:resource="HumanLLMAlignment"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="MoralDecisionMaking">
-  <rdf:type rdf:resource="Domain"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="NonCatastrophicSacrificialDilemmas">
-  <rdf:type rdf:resource="Context"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="UnderstandingAlignmentOfMoralReasing">
-  <rdf:type rdf:resource="Endgoal"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="UnderstandingDifferenceOfMoralReasing">
-  <rdf:type rdf:resource="Endgoal"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="HumanDecisionMaker">
-  <rdf:type rdf:resource="Human"/>
-  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="ChatGPT_4o">
-  <rdf:type rdf:resource="ArtificialAgent"/>
-  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
-  <processingInformation rdf:resource="MoralReasoningProcessing"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Claude_3_5_Sonnet">
-  <rdf:type rdf:resource="ArtificialAgent"/>
-  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
-  <processingInformation rdf:resource="MoralReasoningProcessing"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="Gemini_1_5_Pro">
-  <rdf:type rdf:resource="ArtificialAgent"/>
-  <inScenario rdf:resource="HybridMoralDecisionMaking"/>
-  <processingInformation rdf:resource="MoralReasoningProcessing"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="GEMINIProvidesMoralAdvice">
-  <rdf:type rdf:resource="Interaction"/>
-  <interactingAgent rdf:resource="HumanDecisionMaker"/>
-  <interactingAgent rdf:resource="Gemini_1_5_Pro"/>
-  <interactionTask rdf:resource="Recommendation"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="CLAUDEProvidesMoralAdvice">
-  <rdf:type rdf:resource="Interaction"/>
-  <interactingAgent rdf:resource="Claude_3_5_Sonnet"/>
-  <interactingAgent rdf:resource="HumanDecisionMaker"/>
-  <interactionTask rdf:resource="Recommendation"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="GPTProvidesMoralAdvice">
-  <rdf:type rdf:resource="Interaction"/>
-  <interactingAgent rdf:resource="ChatGPT_4o"/>
-  <interactingAgent rdf:resource="HumanDecisionMaker"/>
-  <interactionTask rdf:resource="Recommendation"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="MoralReasoningProcessing">
-  <rdf:type rdf:resource="InformationProcessing"/>
-  <processingTask rdf:resource="Reasoning"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="HumanLLMAlignment">
-  <rdf:type rdf:resource="EthicalConsideration"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="ConsequentialistSkew">
-  <rdf:type rdf:resource="EthicalConsideration"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="ConformityToLLMAdvice">
-  <rdf:type rdf:resource="EthicalConsideration"/>
-</owl:NamedIndividual>
-
-<Human rdf:about="Teacher">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Human>
-
-<Human rdf:about="Adult">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Human>
-
-<InteractionMethod rdf:about="Single-agent">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</InteractionMethod>
-
-<ProcessingMethod rdf:about="Statistical">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ProcessingMethod>
-
-<Capability rdf:about="Communication">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Capability>
-
-<Capability rdf:about="Transparency">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Capability>
-
-<Capability rdf:about="Adaptiveness">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Capability>
-
-<ProcessingTask rdf:about="Transforming">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ProcessingTask>
-
-<InteractionMethod rdf:about="Contribution-based">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</InteractionMethod>
-
-<InteractionTask rdf:about="Question-Answering">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</InteractionTask>
-
-<ArtificialAgent rdf:about="Intelligent_System">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ArtificialAgent>
-
-<Human rdf:about="Child">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Human>
-
-<InteractionMethod rdf:about="Collaboration-based">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</InteractionMethod>
-
-<InteractionMethod rdf:about="Non-cooperative">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</InteractionMethod>
-
-<ProcessingTask rdf:about="Generating">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ProcessingTask>
-
-<ProcessingTask rdf:about="Reasoning">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ProcessingTask>
-
-<InteractionTask rdf:about="Recommendation">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</InteractionTask>
-
-<ProcessingMethod rdf:about="Hybrid">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ProcessingMethod>
-
-<ProcessingMethod rdf:about="Neuro-symbolic">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ProcessingMethod>
-
-<ArtificialAgent rdf:about="Robot">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ArtificialAgent>
-
-<ProcessingMethod rdf:about="Symbolic">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ProcessingMethod>
-
-<InteractionMethod rdf:about="Multimodal">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</InteractionMethod>
-
-<Capability rdf:about="BDI">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Capability>
-
-<InteractionTask rdf:about="Explainability">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</InteractionTask>
-
-<Capability rdf:about="Collaborativeness">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Capability>
-
-<Human rdf:about="Designer">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Human>
-
-<ProcessingTask rdf:about="Learning">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ProcessingTask>
-
-<Capability rdf:about="Responsibility">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Capability>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/domain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain"/>
+    </owl:ObjectProperty>
+    
 
 
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/endgoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/endgoal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/inScenario -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/inScenario">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/informationMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/informationMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactingAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactingAgent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingInformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingInformation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AGV_Processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AGV_Processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing"/>
+        <informationMethod rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Statistical"/>
+        <processingTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Learning"/>
+        <processingTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reasoning"/>
+        <processingTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transforming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AGV_system -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AGV_system">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+        <capability rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adaptiveness"/>
+        <capability rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaborativeness"/>
+        <capability rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Communication"/>
+        <capability rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transparency"/>
+        <processingInformation rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AGV_Processing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AICommunicatesState -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AICommunicatesState">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AISystem"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUser"/>
+        <interactionMethod rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaboration-based"/>
+        <interactionTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Explainability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AISystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AISystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+        <capability rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Communication"/>
+        <capability rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transparency"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUserInteractionWithAI"/>
+        <processingInformation rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ExplanationProcessing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adaptiveness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adaptiveness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousDriving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousDriving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousVehicle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousVehicle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousVehicleBeliefCommunication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousVehicleBeliefCommunication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousVehicleBeliefCommunication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanPassengerInteraction"/>
+        <domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousDriving"/>
+        <endgoal rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ImproveSituationAwareness"/>
+        <hasInteraction rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/VehicleVisualizesBeliefs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/BDI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/BDI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CLAUDEProvidesMoralAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CLAUDEProvidesMoralAdvice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Claude_3_5_Sonnet"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanDecisionMaker"/>
+        <interactionTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ChatGPT_4o -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ChatGPT_4o">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HybridMoralDecisionMaking"/>
+        <processingInformation rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MoralReasoningProcessing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Child -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Child">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Claude_3_5_Sonnet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Claude_3_5_Sonnet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HybridMoralDecisionMaking"/>
+        <processingInformation rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MoralReasoningProcessing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaboration-based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaboration-based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaborativeness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaborativeness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Communication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Communication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ConformityToLLMAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ConformityToLLMAdvice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ConsequentialistSkew -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ConsequentialistSkew">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Contribution-based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Contribution-based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DecisionSupportSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DecisionSupportSystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+        <capability rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Communication"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingDecisionSupport"/>
+        <processingInformation rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingLabeling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Designer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Designer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUserInteractionWithAI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUserInteractionWithAI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUserInteractionWithAI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUserWithLimitedAIExpertise"/>
+        <domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ExplainableAI"/>
+        <endgoal rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FacilitateUserUnderstanding"/>
+        <hasEthicalConsideration rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TransparencyInAI"/>
+        <hasEthicalConsideration rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TrustCalibration"/>
+        <hasInteraction rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AICommunicatesState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUserWithLimitedAIExpertise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndUserWithLimitedAIExpertise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Explainability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Explainability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ExplainableAI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ExplainableAI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ExplanationProcessing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ExplanationProcessing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing"/>
+        <informationMethod rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Statistical"/>
+        <processingTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reasoning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingAI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingAI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingDecisionSupport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingDecisionSupport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanAwareness"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MachineAccuracy"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TaskDifficulty"/>
+        <domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingAI"/>
+        <endgoal rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ImproveHumanAccuracy"/>
+        <hasEthicalConsideration rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GenderFairness"/>
+        <hasInteraction rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingLabelRecommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingLabelRecommendation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingLabelRecommendation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DecisionSupportSystem"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Participant1"/>
+        <interactionMethod rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Single-agent"/>
+        <interactionTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingLabeling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingLabeling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing"/>
+        <processingTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reasoning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FacilitateUserUnderstanding -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FacilitateUserUnderstanding">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FillResearchGap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FillResearchGap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GEMINIProvidesMoralAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GEMINIProvidesMoralAdvice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Gemini_1_5_Pro"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanDecisionMaker"/>
+        <interactionTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GPTProvidesMoralAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GPTProvidesMoralAdvice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ChatGPT_4o"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanDecisionMaker"/>
+        <interactionTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Gemini_1_5_Pro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Gemini_1_5_Pro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HybridMoralDecisionMaking"/>
+        <processingInformation rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MoralReasoningProcessing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GenderFairness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GenderFairness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Generating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Generating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GenerationalLevels -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GenerationalLevels">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanAwareness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanAwareness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanDecisionMaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanDecisionMaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HybridMoralDecisionMaking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanLLMAlignment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanLLMAlignment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanPassengerInteraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanPassengerInteraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Hybrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Hybrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HybridMoralDecisionMaking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HybridMoralDecisionMaking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NonCatastrophicSacrificialDilemmas"/>
+        <domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MoralDecisionMaking"/>
+        <endgoal rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/UnderstandingAlignmentOfMoralReasing"/>
+        <endgoal rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/UnderstandingDifferenceOfMoralReasing"/>
+        <hasEthicalConsideration rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ConformityToLLMAdvice"/>
+        <hasEthicalConsideration rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ConsequentialistSkew"/>
+        <hasEthicalConsideration rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanLLMAlignment"/>
+        <hasInteraction rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GPTProvidesMoralAdvice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ImproveHumanAccuracy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ImproveHumanAccuracy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ImproveSituationAwareness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ImproveSituationAwareness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Intelligent_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Intelligent_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction_WorkerZ_AGV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction_WorkerZ_AGV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AGV_system"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenZ"/>
+        <interactionMethod rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Multimodal"/>
+        <interactionTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Explainability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Learning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Learning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MachineAccuracy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MachineAccuracy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MoralDecisionMaking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MoralDecisionMaking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MoralReasoningProcessing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MoralReasoningProcessing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing"/>
+        <processingTask rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reasoning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Multimodal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Multimodal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Neuro-symbolic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Neuro-symbolic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Non-cooperative -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Non-cooperative">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NonCatastrophicSacrificialDilemmas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NonCatastrophicSacrificialDilemmas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Participant1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Participant1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FaceMatchingDecisionSupport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Passenger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Passenger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousVehicleBeliefCommunication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Privacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Privacy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Question-Answering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Question-Answering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reasoning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reasoning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Responsibility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Responsibility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Robot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Robot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Safety -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Safety">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Single-agent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Single-agent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Statistical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Statistical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Symbolic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Symbolic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TaskComplexity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TaskComplexity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TaskDifficulty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TaskDifficulty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Teacher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Teacher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transforming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transforming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transparency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transparency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TransparencyInAI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TransparencyInAI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TrustCalibration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TrustCalibration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/UnderstandingAlignmentOfMoralReasing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/UnderstandingAlignmentOfMoralReasing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/UnderstandingDifferenceOfMoralReasing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/UnderstandingDifferenceOfMoralReasing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/VehicleVisualizesBeliefs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/VehicleVisualizesBeliefs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AutonomousVehicle"/>
+        <interactingAgent rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Passenger"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAVGscenario -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAVGscenario">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GenerationalLevels"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TaskComplexity"/>
+        <context rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TrustCalibration"/>
+        <domain rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAutomation"/>
+        <endgoal rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/FillResearchGap"/>
+        <hasEthicalConsideration rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Privacy"/>
+        <hasEthicalConsideration rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Safety"/>
+        <hasInteraction rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction_WorkerZ_AGV"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAutomation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAutomation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenBabyboom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenBabyboom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAVGscenario"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAVGscenario"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAVGscenario"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenZ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker_GenZ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Worker"/>
+        <inScenario rdf:resource="http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WarehouseAVGscenario"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
